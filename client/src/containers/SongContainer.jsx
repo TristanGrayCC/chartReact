@@ -27,7 +27,7 @@ class SongContainer extends React.Component {
       if (request.status !== 200) return;
       const jsonString = request.responseText;
       const data = JSON.parse(jsonString);
-      this.setState({songs: data.feed, selectedSong: data.feed.entry[0]});
+      this.setState({songs: data.feed.entry, selectedSong: data.feed.entry[0]});
     });
     request.send();
   }
