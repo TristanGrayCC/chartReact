@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FilmContainer from './containers/FilmContainer.jsx';
+import SongContainer from './containers/SongContainer.jsx';
 
 window.onload = function () {
   ReactDOM.render(
-    <FilmContainer />,
+    <SongContainer />,
     document.getElementById('app')
   );
 };

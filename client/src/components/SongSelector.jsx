@@ -1,6 +1,6 @@
 import React from 'react';
 
-class FilmSelector extends React.Component {
+class SongSelector extends React.Component {
   constructor(props){
     super(props);
     this.state = {
@@ -10,11 +10,11 @@ class FilmSelector extends React.Component {
   }
 
   render() {
-    const options = this.props.films.map((film, index) => {
-      return <option value={index} key={index}>{film.show_title}</option>
+    const options = this.props.songs.map((song, index) => {
+      return <option value={index} key={index}>{song.show_title}</option>
     })
     return (
-      <select id="films" onChange={this.handleChange} value={this.state.selectedIndex}>
+      <select id="songs" onChange={this.handleChange} value={this.state.selectedIndex}>
         {options}
       </select>
     );
@@ -24,9 +24,9 @@ class FilmSelector extends React.Component {
     const index = event.target.value;
     this.setState({selectedIndex: index});
 
-    const film = this.props.films[index];
-    this.props.onSelectFilm(film);
+    const song = this.props.songs[index];
+    this.props.onSelectSong(song);
   }
 }
 
-export default FilmSelector;
+export default SongSelector;
